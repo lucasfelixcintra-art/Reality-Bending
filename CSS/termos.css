@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 40px;
+  color: #222;
+  background-color: #fff;
+}
+
+h1, h2 {
+  color: #111;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+

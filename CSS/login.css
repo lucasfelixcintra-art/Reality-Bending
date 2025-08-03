@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   text-decoration: none;
+}
+
+body {
+  background-image: url(../imagens/espaço.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+ 
+}
+
+/*------------------------------------------------------------------------------ Estilização do Menu------------------------------------------------------------------------------------*/
+
+/*Tamanho, Cor, Espaçamento etc... do menu*/
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+}
+
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 41.6px;
+  }
+
+/*Barra vertical separando os botões*/
+.barra-vertical {
+  background: #fff;
+  width: 1px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+/*Separar a Logo + barra-vertical + botões do lado direito*/
+.grupo-esquerdo {
+  display: flex;
+  align-items: center;
+}
+
+/*Cor para o botão e transição*/
+.logo{
+  margin-right: 15px;
+}
+
+.logo a {
+  color: #fff;
+}
+
+.logo h1{
+  font-size: 30px;
+  transition: 0.7s;
+}
+
+.logo h1:hover{ 
+  color: blueviolet;
+  transform: scale(1.1);
+}
+
+/*Estilização dos botões*/
+.navegation {
+  display: flex;
+  gap: 50px;
+}
+
+.navegation a {
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+/*Barra branca embaixo dos links*/
+.navegation a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition: 0.3s ;
+}
+
+.navegation a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+/*Estilização do botão login*/
+section .login a {
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+section .login a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+section .login a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+section .login i {
+  padding-left: 5px;
+}
+
+.header .ativado{
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*---------------------------------------------------------------Estilização do formulario de login------------------------------------------------------------------------------------ */
+
+.formulario {
+  width: 420px;
+  background: transparent;
+ border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+ .formulario h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+}
+
+.informacoes {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.informacoes input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.informacoes input::placeholder {
+  color: #fff;
+}
+
+.informacoes img {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.informacoes a {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.informacoes a:hover {
+  text-decoration: underline;
+}
+
+.botao {
+  width: 100%;
+  height: 50px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 24px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.botao:hover {
+  background: rgb(104, 21, 182);
+  transition: 0.3s;
+}
+
+.nao-cadastrado {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nao-cadastrado p {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.nao-cadastrado a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tagesschrift&display=swap');
+
+/* Resetar tamanhos padrão e remover estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Cor de fundo e fonte base para toda a página */
+body {
+  background: #000000;
+  font-family: 'Playfair Display', serif;
+}
+
+/*------------------------------------------------------------------------------ Estilização do Menu------------------------------------------------------------------------------------*/
+
+/* Definições gerais do cabeçalho fixo */
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 41.6px;
+}
+
+/* Barra vertical branca que separa grupos de botões */
+.barra-vertical {
+  background: #fff;
+  width: 1px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+/* Agrupa logo, barra e botões à esquerda do header */
+.grupo-esquerdo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.logo a {
+  color: #fff;
+}
+
+.logo h1 {
+  font-size: 30px;
+  transition: 0.7s;
+}
+
+.logo h1:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+}
+
+.navegation {
+  display: flex;
+  gap: 50px;
+}
+
+.navegation a {
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Barra branca que aparece embaixo do link quando hover */
+.navegation a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+
+/* Aumenta barra embaixo do link ao passar o mouse */
+.navegation a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+/* Estilo do botão login com efeitos iguais aos links */
+section .login a {
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Barra branca embaixo do link login */
+section .login a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition:  0.3s ease;
+}
+
+/* Barra branca cresce ao passar o mouse no login */
+section .login a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+section .login i {
+  padding-left: 5px;
+}
+
+.header .ativado{
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/*--------------------------------------------------------------------------------------Estilização do carrossel---------------------------------------------------------------------------*/
+
+/* Container principal do carrossel, com borda arredondada */
+.carrossel {
+  width: 100%;
+  height: 64%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  padding-top: 50px;
+}
+
+/* Área que contém as imagens (slides) lado a lado */
+.slide {
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+
+/* Cada imagem ocupa 1/3 do carrossel e pode ser movida */
+.imagens {
+  position: relative;
+  width: 33.33%;
+  transition: 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Posiciona os botões de navegação do carrossel */
+.navegation-bar {
+  position: absolute;
+  bottom: 3px;
+  left: 47%;
+  display: flex;
+}
+
+input {
+  display: none;
+}
+
+.carrossel .botao {
+  border: 2px solid #fff;
+  padding: 7px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.carrossel .botao:not(:last-child) {
+  margin-right: 20px;
+}
+
+.carrossel .botao:hover {
+  background: #fff;
+  transition: 0.5s;
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -33.33%;
+}
+
+#radio3:checked~.first {
+  margin-left: -66.66%;
+}
+
+#radio1:checked~.navegation-bar label[for="radio1"],
+#radio2:checked~.navegation-bar label[for="radio2"],
+#radio3:checked~.navegation-bar label[for="radio3"] {
+  background: #fff;
+}
+
+/*--------------------------------------------------------------------------------------Estilização das frases----------------------------------------------------------------------------*/
+
+/*-----------------------------Frase da primeira imagem do carrossel-----------------------------*/
+.conhecer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.conhecer .welcome-future h1 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.conhecer .welcome h1 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.conhecer .comprar {
+  background: blueviolet;
+  border: solid 2px blueviolet;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 5%;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.conhecer .comprar:hover {
+  transform: scale(1.1);
+}
+
+.conhecer .comprar h1 {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.conhecer .comprar span {
+  left: 5px;
+}
+
+/*-----------------------------Frase da segunda imagem do carrossel-----------------------------*/
+.conheça {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.conheça .empresa h1 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.conheça .descubra h1 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.conheça .ir-conhecer {
+  background: blueviolet;
+  border: solid 2px blueviolet;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 5%;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.conheça .ir-conhecer:hover {
+  transform: scale(1.1);
+}
+
+.conheça .ir-conhecer h1 {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.conheça .ir-conhecer span {
+  left: 5px;
+}
+
+/*-----------------------------Frase da terceira imagem do carrossel-----------------------------*/
+.exoesqueleto {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  bottom: 10%;
+  right: 20%;
+  padding: 0;
+  text-align: center;
+}
+
+.exoesqueleto .exoesqueleto-titulo h1 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+.exoesqueleto .exoesqueleto-descricao h1 {
+  color: #ffffff;
+  font-size: 15px;
+  max-width: 40%;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.exoesqueleto .descobrir {
+  background: blueviolet;
+  border: solid 2px blueviolet;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13%;
+  height: 6%;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.exoesqueleto .descobrir:hover {
+  transform: scale(1.1);
+}
+
+.exoesqueleto .descobrir h1 {
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+
+/*---------------------------------------------------Estilização da seção AR e VR-------------------------------------------------------------------------------------------*/
+
+.ar-vr {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #424242;
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.texto-ar-vr {
+  flex: 1 1 400px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.texto-ar-vr .titulo h1 {
+  font-size: 40px ;
+  margin-bottom: 20px;
+  color: #934cce;
+  font-weight: 1000;
+}
+
+.video-ar-vr video {
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  transition:  0.3s ;
+}
+
+.video-ar-vr video:hover {
+  transform: scale(1.05);
+}
+
+/*------------------------------Botão WhatsApp fixo no canto inferior esquerdo--------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Estilo geral do botão WhatsApp fixo */
+.whatsapp a {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #32b964;
+  color: white;
+  border-radius: 100%;
+  font-size: 20px;
+  text-decoration: none;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.whatsapp a:hover {
+  transform: scale(1.1);
+}
+
+/*-------------------------------------------------------------------------Estilização da imagem de garantia------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Container para imagem de garantia */
+.garantia{
+  width: 100%;
+  height: 300px;
+}
+
+.garantia img{
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------------------------------------------------Estilização dos produtos na tela inicial------------------------------------------------------------------------------------------------------------------*/
+
+/* Container dos produtos na página inicial */
+.produtos-inicial{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilo de cada produto */
+.produto-inicial{
+  background: #f5f5f5;
+  width: 30%;
+  text-align: center;
+}
+
+.produto-inicial h1{
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.produto-inicial span{
+  color: blueviolet;
+}
+
+.produto-inicial h1:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+/*---------------------------------------------------------Estilização dos produtos2 na tela inicial------------------------------------------------------------------------------------------------------------------*/
+
+/* Container dos produtos na segunda seção da página inicial */
+.produtos-inicial2{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilo de cada produto na segunda seção */
+.produto-inicial2{
+  background: #f5f5f5;
+  width: 48%;
+  height: 700px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.produto-inicial2 img{
+  width: 100%;
+  height: 500px;
+}
+
+.produto-inicial2 h1{
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.produto-inicial2 span{
+  color: blueviolet;
+}
+
+.produto-inicial2 h1:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+/*-------------------------------------------------------------------------Estilização rodapé--------------------------------------------------------------------------------------------------*/
+
+/* Container geral do rodapé com fundo roxo escuro */
+.rodape {
+  width: 100%;
+  background: rgb(93, 7, 173);
+  padding: 60px 20px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* Container interno para centralizar e limitar largura */
+.corpo-rodape { 
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Primeira linha do rodapé com múltiplas colunas */
+.linha1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* Box que serve como coluna dentro do rodapé */
+.box1 {
+  flex: 1 1 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 h1 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.box1 p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.institucional img {
+  width: 110px;
+  height: 110px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ddd;
+}
+
+/* Segunda linha do rodapé */
+.linha2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ccc;
+}

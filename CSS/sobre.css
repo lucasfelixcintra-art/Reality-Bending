@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Resetar tamanhos padrão e remover estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Cor de fundo e fonte base para toda a página */
+body {
+  background: rgb(12, 12, 12);
+  font-family: 'Playfair Display', serif;
+}
+
+/*------------------------------------------------------------------------------ Estilização do Menu------------------------------------------------------------------------------------*/
+
+/* Definições gerais do cabeçalho fixo */
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 41.6px;
+}
+
+/* Barra vertical branca que separa grupos de botões */
+.barra-vertical {
+  background: #fff;
+  width: 1px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+/* Agrupa logo, barra e botões à esquerda do header */
+.grupo-esquerdo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.logo a {
+  color: #fff;
+}
+
+.logo h1 {
+  font-size: 30px;
+  transition: 0.7s;
+}
+
+.logo h1:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+}
+
+.navegation {
+  display: flex;
+  gap: 50px;
+}
+
+.navegation a {
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Barra branca que aparece embaixo do link quando hover */
+.navegation a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+
+/* Aumenta barra embaixo do link ao passar o mouse */
+.navegation a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+/* Estilo do botão login com efeitos iguais aos links */
+section .login a {
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Barra branca embaixo do link login */
+section .login a::after {
+  content: '';
+  bottom: -4px;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #ffffff;
+  transition:  0.3s ease;
+}
+
+/* Barra branca cresce ao passar o mouse no login */
+section .login a:hover::after {
+  transition: 0.7s;
+  width: 100%;
+  height: 2px;
+}
+
+section .login i {
+  padding-left: 5px;
+}
+
+.header .ativado{
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*------------------------------------------------------------criação das informações-------------------------------------------------------------------------------------*/
+
+.sobre {
+ padding-top: 50px;
+  width: 100%;
+  height: 2000px;
+}
+
+.sobre1{
+ width: 100%;
+  height: 1000px;
+ display: flex;
+}
+
+.imagem1{
+  width: 50%;
+  height: 1000px;
+}
+
+.imagem1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.texto1{
+  width: 50%;
+  height: 1000px;
+  color: #fff;
+align-content: center;
+background: blueviolet;
+}
+
+.texto1 h1{
+  font-size: 18px;
+  letter-spacing: 2.2px;
+   padding-left: 20px; 
+  padding-right: 20px;
+    padding-top: 40px;
+}
+
+.texto1 .titulo1{
+  font-size: 50px;
+  font-weight: bold;
+}
+/*--------------------------------*/
+
+.sobre2{
+ width: 100%;
+  height: 1000px;
+ display: flex;
+}
+
+.imagem2{
+  width: 50%;
+  height: 1000px;
+}
+
+.imagem2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.texto2{
+  width: 50%;
+  height: 1000px;
+  color: #fff;
+align-content: center;
+background: rgb(211, 211, 211);
+
+}
+
+.texto2 h1{
+  font-size: 18px;
+  letter-spacing: 2.2px;
+   padding-left: 20px; 
+  padding-right: 20px;
+  color: blueviolet;
+  padding-top: 40px;
+}
+
+.texto2 .titulo2{
+  font-size: 50px;
+  font-weight: bold;
+}

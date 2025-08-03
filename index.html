@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
+        viewBox="0 0 16 16">
+        <path
+            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+    </svg>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+    <script src="JS/carrossel.js" defer></script>
+    <title>RealityBendingStudios</title>
+</head>
+
+<body>
+
+    <!-- Conteúdo principal da página -->
+    <div class="conteudo-principal">
+
+        <!-- Menu de Navegação -->
+        <header class="header">
+            <section>
+
+                <!-- Grupo à esquerda: logo e botões de navegação -->
+                <div class="grupo-esquerdo">
+
+                    <!-- Logo do site com link para home -->
+                    <div class="logo">
+                        <a href="home.html" target="_self" class="nome-site">
+                            <h1>Reality Bending Studios</h1>
+                        </a>
+                    </div>
+
+                    <!-- Barra vertical separadora -->
+                    <div class="barra-vertical"></div>
+
+                    <!-- Navegação principal com links -->
+                    <nav class="navegation">
+                        <a href="home.html" class="ativado">Home</a>
+                        <a href="sobre.html">Sobre</a>
+                                <a href="projetos.html" target="_self">Projetos</a>
+                        <a href="produtos.html  " target="_self"> Produtos </a>
+                    </nav>
+                </div>
+
+                <!-- Área do login, separada dos botões -->
+                <div class="login">
+                    <a href="login.html" target="_self">Login<i class="bi bi-person-circle"></i></a>
+                </div>
+
+            </section>
+        </header>
+
+        <!-- Criação do carrossel de imagens -->
+        <div class="carrossel">
+
+            <!-- Contêiner dos slides -->
+            <div class="slide">
+
+                <!-- Botões radio para controlar o slide -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <!-- Slide 1 -->
+                <div class="imagens first">
+                    <img src="imagens/espaço.png" alt="">
+                    <div class="conhecer">
+
+                        <div class="welcome-future">
+                            <h1>Welcome to the Future<br></h1>
+                        </div>
+
+                        <div class="welcome">
+                            <h1>Welcome Reality Bending</h1>
+                        </div>
+
+                        <div class="comprar">
+                            <a href="produtos.html" target="_self">
+                                <h1><strong>Produtos</strong><span>&#10132;</span></h1>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="imagens">
+                    <img src="imagens/equipamentos.png" alt="">
+                    <div class="conheça">
+
+                        <div class="empresa">
+                            <h1>Conheça a nossa Empresa<br></h1>
+                        </div>
+
+                        <div class="descubra">
+                            <h1>Descubra quem somos e nossos Objetivos</h1>
+                        </div>
+
+                        <div class="ir-conhecer">
+                            <a href="produtos.html" target="_self">
+                                <h1><strong>Conhecer</strong><span>&#10132;</span></h1>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="imagens">
+                    <img src="imagens/capa.png" alt="">
+
+                    <div class="exoesqueleto">
+
+                        <div class="exoesqueleto-titulo">
+                            <h1>Conheça Nossos Novos Projetos<br></h1>
+                        </div>
+
+                        <div class="descobrir">
+                            <a href="projetos.html" target="_self">
+                                <h1><strong></strong>Conhecer<span>&#10132;</span></h1>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Barra de navegação do carrossel (botões indicadores) -->
+                <div class="navegation-bar">
+                    <label class="botao" for="radio1"></label>
+                    <label class="botao" for="radio2"></label>
+                    <label class="botao" for="radio3"></label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Seção explicativa sobre AR e VR -->
+        <div class="ar-vr">
+
+            <!-- Texto explicativo -->
+            <div class="texto-ar-vr">
+
+                <div class="titulo">
+                    <h1>O que é VR e AR</h1>
+                </div>
+
+                <div class="ar">
+                    <h1>VR</h1>
+                    <h1>• Realidade Virtual (RV) é uma tecnologia que cria um ambiente completamente digital
+                        e imersivo, onde o usuário é isolado do mundo real
+                    </h1>
+                </div>
+
+                <div class="vr">
+                    <h1>AR</h1>
+                    <h1> • Realidade Virtual (RV) é uma tecnologia que cria um ambiente completamente digital
+                        e imersivo, onde o usuário é isolado do mundo real
+                        • Realidade Aumentada (AR), por outro lado, mistura o mundo real com elementos
+                        virtuais. Em vez de isolar o usuário, ela adiciona imagens, sons ou informações digitais
+                        ao ambiente físico, geralmente usando a câmera de um celular ou óculos especiais.
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Vídeo explicativo sobre AR e VR -->
+            <div class="video-ar-vr">
+                <video controls width="640" height="360">
+                    <source src="video/4354243-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+            </div>
+
+        </div>
+
+        <!-- Botão fixo do WhatsApp -->
+        <div class="whatsapp">
+            <a href="https://wa.me/12982971896" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+
+
+    <!-- Rodapé da página -->
+    <footer class="rodape">
+        <div class="corpo-rodape">
+
+            <section class="linha1">
+
+                <!-- Box institucional com logo e descrição -->
+                <div class="box1 institucional">
+                    <img src="imagens/logo.png" alt="Logo">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero adipisci, quisquam voluptates obcaecati rerum
+                        deleniti dolorem officiis harum mollitia quis.
+                    </p>
+                </div>
+
+                <!-- Box institucional reutilizável com links -->
+                <div class="box1">
+                    <h1>Institucional</h1>
+                    <div class="links">
+                        <a href="#">Sobre</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Trabalhe conosco</a>
+                    </div>
+                </div>
+
+                <!-- Box produtos com links -->
+                <div class="box1">
+                    <h1>Produtos</h1>
+                    <div class="links">
+                        <a href="#">Categoria A</a>
+                        <a href="#">Categoria B</a>
+                        <a href="#">Categoria C</a>
+                    </div>
+                </div>
+
+                <!-- Box suporte com links -->
+                <div class="box1">
+                    <h1>Suporte</h1>
+                    <div class="links">
+                        <a href="#">Ajuda</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Política de privacidade</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Linha inferior do rodapé -->
+            <section class="linha2">
+                <p>&copy; 2025 Reality Bending Studios. Todos os direitos reservados.</p>
+            </section>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

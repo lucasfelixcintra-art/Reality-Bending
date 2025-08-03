@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+
+  <!-- Menu de Navegação -->
+  <header class="header">
+    <section>
+
+      <!-- Div para separar a logo e od botoes do login-->
+      <div class="grupo-esquerdo">
+        <div class="logo">
+          <a href="home.html" target="_self" class="nome-site">
+            <h1>Reality Bending Studios</h1>
+          </a>
+        </div>
+
+        <!-- div para criar uma barra -->
+        <div class="barra-vertical"></div>
+
+        <!-- botões-->
+        <nav class="navegation">
+          <a href="home.html">Home</a>
+          <a href="sobre.html">Sobre </a>
+                  <a href="projetos.html" target="_self">Projetos</a>
+                        <a href="produtos.html  " target="_self"> Produtos </a>
+        </nav>
+      </div>
+
+      <!-- separar o login dos botões-->
+      <div class="login">
+        <a class="ativado">Login<i class="bi bi-person-circle"></i></a>
+      </div>
+
+    </section>
+  </header>
+
+  <div class="formulario">
+    <form>
+      <h1>Entrar na Plataforma</h1>
+
+      <div class="informacoes">
+        <input placeholder="Email" type="email" required>
+        <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/ffffff/user.png" alt="user" />
+
+      </div>
+
+      <div class="informacoes">
+        <input placeholder="Senha" type="password" required minlength="6" maxlength="20">
+        <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/ffffff/lock--v1.png" alt="lock" />
+        <a href="#">Esqueci minha Senha</a>
+      </div>
+
+      <button type="submit" class="botao">Entrar</button>
+
+      <div class="nao-cadastrado">
+        <p>Não está cadastrado?<a href="criarconta.html" target="_blank"> Cadastrar</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
